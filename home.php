@@ -42,5 +42,15 @@
                 $('#datas').DataTable();
             });
         </script>
+        <script >
+            $(document).ready(function() {
+            var table = $('#datas').DataTable();
+     
+            $('#datas tbody').on('click', 'tr', function () {
+                var data = table.row( this ).data();
+                alert( 'User Information\n\n\nUsername :  '+data[0]+'\nemail : '+data[1]+'\npassword : '+data[2]+' ' );
+            } );
+        } );    
+        </script>
     </body>
 </html>
